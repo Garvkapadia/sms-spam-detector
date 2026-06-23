@@ -7,9 +7,12 @@ import pickle
 tfidf=pickle.load(open('vectorizer.pkl','rb'))
 model=pickle.load(open('model.pkl','rb'))
 import string
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-import nltk
+
 ps = PorterStemmer()
 stop_words = set(stopwords.words('english'))
 def transform_text(message):
