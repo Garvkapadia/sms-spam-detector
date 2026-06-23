@@ -1,3 +1,4 @@
+
 # SMS Spam Detection System
 
 A Machine Learning web application that predicts whether an SMS message is Spam or Not Spam.
@@ -33,3 +34,4 @@ streamlit run app.py
 
 ## Author
 Garv Kapadia
+
