@@ -25,6 +25,11 @@ A Machine Learning web application that predicts whether an SMS message is Spam 
 5. Spam Prediction
 6. Streamlit Deployment
 
+## Live Demo
+
+Try the deployed app:
+https://sms-spam-detection-system-kcoz.onrender.com
+
 ## Run Locally
 
 ```bash
