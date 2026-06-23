@@ -6,10 +6,14 @@ import pickle
 
 tfidf=pickle.load(open('vectorizer.pkl','rb'))
 model=pickle.load(open('model.pkl','rb'))
+
 import string
 import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
+
+nltk.download('stopwords', quiet=True, download_dir='/opt/render/nltk_data')
+nltk.download('punkt_tab', quiet=True, download_dir='/opt/render/nltk_data')
+nltk.download('punkt', quiet=True, download_dir='/opt/render/nltk_data')
+
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
@@ -28,7 +32,7 @@ def transform_text(message):
     y.clear()
 
     for i in text:
-        if i not in stopwords.words('english') and i not in string.punctuation:
+        if i not in stop_words and i not in string.punctuation:
             y.append(i)
 
     message = y[:]
